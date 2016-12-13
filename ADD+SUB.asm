@@ -1,0 +1,49 @@
+org 100h
+
+; add your code here
+
+MOV AH, 01H
+INT 21H
+
+MOV BL, AL, 
+
+MOV AH, 01H
+INT 21H
+
+
+SUB BL, AL
+
+ADD BL, 48
+;aas
+
+MOV AH, 02H
+MOV DL, BL 
+INT 21H
+
+
+MOV AH, 02H
+MOV DL, 0DH
+INT 21H
+MOV DL, 0AH
+INT 21H
+
+MOV AH, 01H
+INT 21H
+
+MOV BL, AL 
+
+MOV AH, 01H
+INT 21H
+
+
+ADD BL, AL
+
+SUB BL, 48
+
+MOV AH, 02H
+MOV DL, BL 
+INT 21H
+
+
+ret
+
